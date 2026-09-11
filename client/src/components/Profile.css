@@ -1,0 +1,87 @@
+.profile-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.tab {
+  padding: 0.5rem 1.25rem;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #555;
+}
+
+.tab:hover {
+  background-color: #a3bffa;
+  color: white;
+  transform: scale(1.05);
+}
+
+.tab.active {
+  background: linear-gradient(to right, #4f46e5, #3b82f6);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.tab-content {
+  background-color: #fafafa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: inset 0 0 0 1px #e5e7eb;
+}
+
+.profile-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.8;
+  font-size: 15px;
+  color: #444;
+}
+
+.profile-card p {
+  margin: 0.5rem 0;
+}
+
+.profile-card h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 1.25rem;
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 2rem;
+  color: #888;
+}

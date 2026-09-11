@@ -1,0 +1,180 @@
+/* Login.css
+.login-container {
+  width: 100%;
+  max-width: 40%;          
+  margin: 5rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;  
+}
+
+.login-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #2e86de;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .login-container {
+    max-width: 90%;
+    margin-top: 3rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+
+@media (max-width: 1280px) {
+  .login-container {
+    max-width: 90%;
+    margin-top: 6rem;
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 2280px) {
+  .login-container {
+    max-width: 90%;
+    margin-top: 12rem;
+    padding: 8rem;
+  }
+}
+
+@media (max-width: 4280px) {
+  .login-container {
+    max-width: 90%;
+    margin-top: 24rem;
+    padding: 9rem 12rem;
+  }
+} */
+
+/* ========== Login.css (refactored) ========== */
+
+/* This scales the root font between 14 px and 20 px automatically */
+html {
+  font-size: clamp(14px, 0.9vw, 20px);
+}
+
+/* ----- Card frame ----- */
+.login-container {
+  /* width grows smoothly but never smaller than 300 px,
+     never larger than 600 px, and ~35 % in between */
+  width: clamp(300px, 35vw, 800px);
+
+  margin-inline: auto;
+  margin-block-start: clamp(3rem, 10vh, 8rem);
+
+  padding: clamp(1.25rem, 3vw, 4rem);
+
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* ----- Heading ----- */
+.login-heading {
+  text-align: center;
+  margin-block-end: clamp(1rem, 3vh, 2rem);
+  font-size: clamp(1.3rem, 3vw, 2.4rem);
+}
+
+/* ----- Inputs ----- */
+.login-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-block-end: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: clamp(1rem, 1.1vw, 1.25rem);
+  box-sizing: border-box;
+}
+
+/* ----- Button ----- */
+.login-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #2e86de;
+  color: #fff;
+  font-size: clamp(1rem, 1.1vw, 1.25rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+/* Forgot password link style */
+.forgot-password-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.forgot-password-btn {
+  background: none;
+  border: none;
+  color: #2e86de;
+  font-size: clamp(1rem, 1.1vw, 1.25rem);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.forgot-password-btn:hover {
+  color: #1b4f9c;
+  transform: scale(1.05);
+}
+
+.forgot-password-btn:active {
+  transform: scale(0.98);
+}
+
+/* Extra breathing room only on monster (>2560 px) screens */
+@media (min-width: 2560px) {
+  .login-container {
+    margin-block-start: 10rem;
+    margin-top: 16rem;
+    padding: 24rem 5rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .login-container {
+    width: 1800px;
+    /* or whatever looks sweet on your monitor */
+    margin-block-start: 24rem;
+    padding: 15rem;
+  }
+
+  .login-heading {
+    font-size: 3.6rem;
+  }
+
+  .login-input,
+  .login-btn {
+    font-size: 2.35rem;
+  }
+}

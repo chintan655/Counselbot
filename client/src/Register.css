@@ -1,0 +1,114 @@
+/* 
+.register-container {
+  width: 100%;
+  max-width: 40%;         
+  margin: 5rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;  
+}
+
+.register-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #10ac84;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .register-container {
+    max-width: 90%;
+    margin-top: 3rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+} */
+/* ========== Register.css (fully fluid) ========== */
+
+/* Make sure this is only in one global file like index.css */
+html {
+  font-size: clamp(14px, 0.9vw, 20px);
+}
+
+/* ----- Main container ----- */
+.register-container {
+  width: clamp(300px, 35vw, 800px);
+  margin-inline: auto;
+  margin-block-start: clamp(3rem, 10vh, 8rem);
+  padding: clamp(1.25rem, 3vw, 4rem);
+
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* ----- Heading ----- */
+.register-heading {
+  text-align: center;
+  margin-block-end: clamp(1rem, 3vh, 2rem);
+  font-size: clamp(1.3rem, 3vw, 2.4rem);
+}
+
+/* ----- Inputs (same class as Login) ----- */
+.register-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-block-end: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: clamp(1rem, 1.1vw, 1.25rem);
+  box-sizing: border-box;
+}
+
+/* ----- Button ----- */
+.register-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #10ac84;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(1rem, 1.1vw, 1.25rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.register-btn:active {
+  transform: scale(0.98);
+}
+
+/* Extra margin on ultra-wide screens */
+@media (min-width: 2560px) {
+  .register-container {
+    margin-block-start: 10rem;
+  }
+}
+@media (min-width: 3840px) {
+  .register-container {
+    width: 1800px;          /* or whatever looks sweet on your monitor */
+    margin-block-start: 24rem;
+    padding: 15rem;
+  }
+  .register-heading      { font-size: 5.6rem; }
+  .register-input,
+  .register-btn          { font-size: 2.35rem; }
+}
